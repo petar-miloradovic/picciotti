@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Registrazione - Peanuts School</title>
+</head>
+<body>
+    <form action="registrati.php" method="post">
+    professione
+    <select name="lavoro" id="lavoro">
+        <option value="1">docente</option>
+        <option value="2">tecnico</option>
+        <option value="3">segretario</option>
+    </select>
+    <br>
+    sede
+    <select name="sede" id="sede">
+        <option value="1">Via anime 104</option>
+    </select>
+    <br>
+    username
+    <label for="username">
+        <input type="text" name ="username"/>
+    </label>
+    <br>
+    nome
+    <label for="name">
+        <input type="text" name ="name"/>
+    </label>
+    <br>
+    cognome
+    <label for="cognome">
+        <input type="text" name ="cognome"/>
+    </label>
+    <br>
+    email
+    <label for="email">
+        <input type="text" name ="email"/>
+    </label>
+    <br>
+    password
+    <label for="password">
+        <input type="password" name ="password"/>
+    </label>
+    <br>
+    controlo password
+    <label for="password2">
+        <input type="password" name ="password2"/>
+    </label>
+    <br>
+    <input type="submit" placeholder="">
+    </form>
+</body>
+</html>
