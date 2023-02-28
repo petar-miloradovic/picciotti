@@ -1,24 +1,63 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-   
-    
+    <title>login</title>
 </head>
 <body>
-    <h1 style="height: 50px;">in questa pagina per richiedere assistenza</h1><br>
-    <ul><p>puoi richiedere questi tipi di assistenza:</p>
-       <li style="margin-left: 5%;">software</li>
-       <li style="margin-left: 5%;">hardwre</li>
-         </ul>   
-         <br>
-    <a href="index.html">home</a>
-    
-
+    RICHIESTA ASSISTENZA
+    <form action="insert.php" method="post">
+        data:
+        <input type="date" name="data"/>
+        <br>
+        priorità:
+        <input type="text" name="pri"/> 
+        <br>
+        descrizione:
+        <input type="text" name="desc"> 
+        <br>
+        ambito:
+        <input type="text" name="amb"> 
+        <br>
+        luogo:
+        <select name="luogo">
+            <option value=1>animeland 104</option>
+            <option value=2>bho 69</option>
+        </select>
+        <br>
+        tipologia: 
+        <select name="tipo">
+            <option value=1>hardware</option>
+            <option value=2>software</option>
+        </select>
+        <br>
+        status:
+        <input type="text" name="stato"> 
+        <br>
+        <input type="submit" placeholder="">
+        <br>
+        <br>
+    </form>
+        Modifica dati
+        <form action="update.php" method="post">
+        username:
+        <label for="username">
+            <input type="text" name ="username"/>
+        </label>
+        <br>
+        email:
+        <label for="email">
+            <input type="text" name ="email"/>
+        </label>
+        <br>
+        password:
+        <label for="password">
+            <input type="password" name ="password"/>
+        </label>
+        <br>
+        <input type="submit" placeholder="">
+    </form>
 </body>
 </html>

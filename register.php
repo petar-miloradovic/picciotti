@@ -13,7 +13,7 @@ $email = $_POST["email"];
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "scuola_5ei";
+$dbname = "picciotti";
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
