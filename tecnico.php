@@ -1,22 +1,36 @@
-<?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "picciotti";
 
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-// Check connection
-if (!$conn) {
-  die("Connection failed: " . $mysql_connect_error());
-}
-echo "Connection successfully";
+<?php 
+$username = "u"; 
+$password = ""; 
+$database = ""; 
+$mysqli = new mysqli("localhost", $username, $password, $database); 
+$query = "SELECT * FROM richiesta where tipologia = 'hardware'";
 
-if($pw != $controllo){
-    header("location:register.html");
-}
-$pw = md5($pw);
+echo '<table border="0" cellspacing="2" cellpadding="2"> 
+      <tr> 
+          <td> <font face="Arial">data</font> </td> 
+          <td> <font face="Arial">priorità</font> </td> 
+          <td> <font face="Arial">descrizione</font> </td> 
+          <td> <font face="Arial">ambito</font> </td> 
+          <td> <font face="Arial">tipologia</font> </td> 
+      </tr>';
 
+if ($result = $mysqli->query($query)) {
+    while ($row = $result->fetch_assoc()) {
+        $field1name = $row["col1"];
+        $field2name = $row["col2"];
+        $field3name = $row["col3"];
+        $field4name = $row["col4"];
+        $field5name = $row["col5"]; 
 
-
+        echo '<tr> 
+                  <td>'.$field1name.'</td> 
+                  <td>'.$field2name.'</td> 
+                  <td>'.$field3name.'</td> 
+                  <td>'.$field4name.'</td> 
+                  <td>'.$field5name.'</td> 
+              </tr>';
+    }
+    $result->free();
+} 
 ?>
