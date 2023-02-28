@@ -4,60 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login</title>
+    <title>Docente</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    RICHIESTA ASSISTENZA
-    <form action="insert.php" method="post">
-        data:
-        <input type="date" name="data"/>
-        <br>
-        priorità:
-        <input type="text" name="pri"/> 
-        <br>
-        descrizione:
-        <input type="text" name="desc"> 
-        <br>
-        ambito:
-        <input type="text" name="amb"> 
-        <br>
-        luogo:
-        <select name="luogo">
-            <option value=1>animeland 104</option>
-            <option value=2>bho 69</option>
-        </select>
-        <br>
-        tipologia: 
-        <select name="tipo">
-            <option value=1>hardware</option>
-            <option value=2>software</option>
-        </select>
-        <br>
-        status:
-        <input type="text" name="stato"> 
-        <br>
-        <input type="submit" placeholder="">
-        <br>
-        <br>
+    <h1>Modifica dei dati</h1>
+    
+    <form action="edit.php" method="post">
+        <label for="nome">Nome</label>
+        <input type="text" name="nome"> <br>
+        <label for="conome">Cognome</label>
+        <input type="text" name="cognome"> <br>
+        <label for="email">Email</label>
+        <input type="email" name="email"> <br>
+        <label for="pass1" >Password*</label>
+        <input type="password" name="pass1" required> <br>
+        <label for="pass2">Nuova password(lascia vuoto per ignorare)</label>
+        <input type="password" name="pass2"> <br>
+        <label for="pass3">Conferma la nuova password</label>
+        <input type="password" name="pass3"> <br>
+        <input type="submit" value="conferma"> <br>
     </form>
-        Modifica dati
-        <form action="update.php" method="post">
-        username:
-        <label for="username">
-            <input type="text" name ="username"/>
-        </label>
-        <br>
-        email:
-        <label for="email">
-            <input type="text" name ="email"/>
-        </label>
-        <br>
-        password:
-        <label for="password">
-            <input type="password" name ="password"/>
-        </label>
-        <br>
-        <input type="submit" placeholder="">
+    <h1>Richiesta di assistenza</h1>
+    <form action="richiesta.php" method="post">
+        <label for="tipologia">Tipologia</label>
+        <select name="tipologia">
+            <option value="1">Software</option>
+            <option value="2">Hardware</option>
+        </select> <br>
+        <label for="descrizione">Inserisci una descrizione dettagliata del problema</label>
     </form>
 </body>
 </html>
