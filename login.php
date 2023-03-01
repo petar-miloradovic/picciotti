@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 $user = $_POST["username"];
 $pw = $_POST["password"];
 $tipo = $_POST["tipologia"];
@@ -45,6 +46,8 @@ if ($rowcount == 1){
     $result = mysqli_query($conn,$sql2);
     $rowcount = mysqli_num_rows($result);
     $row = mysqli_fetch_assoc($result);
+    $utente = $_SESSION["utente"];
+    $password = $_SESSION["password"];
     if($pw == $row['password']){
             echo"logged";
         switch ($tipo){
@@ -70,5 +73,5 @@ else{
 
 
 mysqli_close($conn);
-
+session_abort();
 ?>
