@@ -9,8 +9,7 @@
 </head>
 <body>
     <h1>Modifica dei dati</h1>
-    
-    <form action="edit.php" method="post">
+    <form action="edit.php" method="post" id="box">
         <label for="nome">Nome</label>
         <input type="text" name="nome"> <br>
         <label for="conome">Cognome</label>
@@ -26,13 +25,26 @@
         <input type="submit" value="conferma"> <br>
     </form>
     <h1>Richiesta di assistenza</h1>
-    <form action="richiesta.php" method="post">
+    <form action="richiesta.php" method="post" id="box">
         <label for="tipologia">Tipologia</label>
         <select name="tipologia">
             <option value="1">Software</option>
             <option value="2">Hardware</option>
         </select> <br>
+        <label for="ambito">Ambito</label>
+        <input type="text" name="ambito"> <br>
         <label for="descrizione">Inserisci una descrizione dettagliata del problema</label>
+        <textarea name="desc" rows="5" cols="25"></textarea> <br>
+        <label for="text">Inserisci la prioritá/gravitá della situazione</label>
+        <select name="priorita">
+            <option value="1">Grave</option>
+            <option value="2">Medio</option>
+            <option value="3">Si puó soppravvivere</option>
+            <option value="4">Una virgola</option>
+        </select> <br>
+        <label for="luogo">Indica la classe e la sede</label>
+        <input type="text" name="luogo"> <br>
+
     </form>
 </body>
 </html>

@@ -13,9 +13,20 @@ if (!$conn) {
 }
 echo "Connection successfully";
 
-date_default_timezone_set('Europe/Rome');
-$date = date("d-m-Y");
 
+$nome = $_POST["nome"];
+$cognome = $_POST["cognome"];
+$email = $_POST["email"];
+$pass1 = $_POST["pass1"];
+$pass2 = $_POST["pass2"];
 
+if ($pass2 != "") {
+  $pass3 = $_POST["pass3"];
+  if ($pass2 == $pass3) {
+    echo "password aggiornata correttamente";
+  } else {
+    echo "password diverse, ritenta";
+  }
+} 
 
 ?>
