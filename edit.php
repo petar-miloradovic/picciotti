@@ -105,5 +105,4 @@ if($nome != "" && $cognome != "" && $email != "") {
 
 mysqli_close($conn);
 session_abort();
-
 ?>
