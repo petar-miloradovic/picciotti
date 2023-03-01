@@ -1,7 +1,11 @@
+/*
+    scritto da petar miloradovic
+*/
+
 body{
     background: #d34545;
 }
-#box {
+.box {
     padding: 5px 5px 5px;
     background: #ffc2c2;
 }
