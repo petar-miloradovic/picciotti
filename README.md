@@ -1,8 +1,8 @@
-# I tre moschettieri
+# I tre moschettieri ඞ
 
 * Petar Miloradovic 
 * Nicoló Beltrame
-* Matteo Mario Pulvirenti ඞ
+* Matteo Mario Pulvirenti 
 
 # DIAGRAMMA ER
 
