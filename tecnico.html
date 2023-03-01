@@ -1,38 +1,35 @@
-
 <!DOCTYPE html>
 <html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login</title>
-</head>
-<body>
-    RICHIESTA ASSISTENZA
-    <form action="tecnico.php" method="post">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>login tecnico</title>
+    </head>
+    <body>
         
-        <input type="submit" placeholder="">
-        <br>
-        <br>
-    </form>
-        Modifica dati
-        <form action="update.php" method="post">
-        username:
-        <label for="username">
-            <input type="text" name ="username"/>
-        </label>
-        <br>
-        email:
-        <label for="email">
-            <input type="text" name ="email"/>
-        </label>
-        <br>
-        password:
-        <label for="password">
-            <input type="password" name ="password"/>
-        </label>
-        <br>
-        <input type="submit" placeholder="">
-    </form>
-</body>
+        <h1>Modifica dei dati</h1>
+        <form action="edit.php" method="post" id="box">
+            <label for="nome">Nome</label>
+            <input type="text" name="nome"> <br>
+            <label for="conome">Cognome</label>
+            <input type="text" name="cognome"> <br>
+            <label for="email">Email</label>
+            <input type="email" name="email"> <br>
+            <label for="pass1" >Password*</label>
+            <input type="password" name="pass1" required> <br>
+            <label for="pass2">Nuova password(lascia vuoto per ignorare)</label>
+            <input type="password" name="pass2"> <br>
+            <label for="pass3">Conferma la nuova password</label>
+            <input type="password" name="pass3"> <br>
+            <input type="submit" value="conferma"> <br>
+        </form>
+         <h1>Visualizza Richieste</h1>
+        <form action="tecnico.php" method="post" id="box">
+            <input type="submit" value="visualizza"> <br>
+        </form>
+
+
+    </body>
 </html>
+
