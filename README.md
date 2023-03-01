@@ -1,13 +1,15 @@
-<<<<<<< HEAD
 # I tre moschettieri
+
 * Petar Miloradovic 
 * Nicoló Beltrame
 * Matteo Mario Pulvirenti
 
 # DIAGRAMMA ER
+
 ![](ER_SCUOLA.png)
 
 # SCHEMA LOGICO
+
 aula(id_aula(pk), fk_sede) <br>
 carrello(id_carrello(pk), fk_sede)<br>
 docente(username(pk), nome, cognome, email, password)<br>
