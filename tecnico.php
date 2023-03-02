@@ -30,7 +30,7 @@
                     echo "<td>" . $riga['tipologia'] . "</td>";
                     echo "<td>" . $riga['status'] . "</td>";
                     echo "<td>" ."<form action='update.php' method='post'>
-                         <input type='submit' name= value='$i'> <br>
+                         <input type='submit'  name= value='$i'> <br>
                     </form>"."</td>";
                     $i+=1;
                     echo "</tr>";
@@ -42,4 +42,4 @@
 
             // chiudere la connessione
             mysqli_close($conn);
-        ?> 
+?> 

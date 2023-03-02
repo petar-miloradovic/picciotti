@@ -12,6 +12,7 @@ $dbname = "picciotti";
 
 if(isset($_SESSION["login"]) and $_SESSION["login"] == "ok"){
   $utente = $_SESSION["utente"];
+  $lavoro = $_SESSION["lavoro"];
   // Create connection
   $conn = mysqli_connect($servername, $username, $password, $dbname);
   // Check connection
@@ -40,7 +41,7 @@ $pass2 = $_POST["pass2"];
 
 $pass1 = md5($pass1);
 
-$sql_password = "SELECT password FROM $docente WHERE username = '$utente'";
+$sql_password = "SELECT password FROM '$lavoro' WHERE username = '$utente'";
 if ($conn->query($sql_password) === TRUE) {
   echo "password corretta";
   } else {
