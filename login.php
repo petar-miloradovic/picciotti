@@ -1,4 +1,7 @@
 <?php
+/*
+* scritto da nicolò beltrame
+*/
 $user = $_POST["username"];
 $pw = $_POST["password"];
 $tipo = $_POST["tipologia"];
@@ -44,12 +47,12 @@ if ($rowcount == 1){
     $result = mysqli_query($conn,$sql2);
     $rowcount = mysqli_num_rows($result);
     $row = mysqli_fetch_assoc($result);
-    session_start();
-    $_SESSION['password'] = 'ok';
-    $_SESSION['login'] = 'ok';
-    $_SESSION['utente'] = $user;
     if($pw == $row['password']){
-            echo"logged";
+        echo"logged";
+        session_start();
+        $_SESSION['password'] = 'ok';
+        $_SESSION['login'] = 'ok';
+        $_SESSION['utente'] = $user;
         switch ($tipo){
             case 1: 
                 $_SESSION['lavoro'] = "docente";
