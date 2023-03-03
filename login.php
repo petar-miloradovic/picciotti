@@ -70,11 +70,12 @@ if ($rowcount == 1){
     }
         else{
             echo"password errata";
+            header("location:login.html");
         }
     
 }
 else{
-    printf("utente non registrato");
+    header("location:login.html");;
 }
 
 

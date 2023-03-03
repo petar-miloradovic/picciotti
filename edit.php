@@ -3,14 +3,14 @@
  * scritto da petar miloradovic
  */
 
-session_start();
-
 $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "picciotti";
 
-if(isset($_SESSION["login"]) and $_SESSION["login"] == "ok"){
+session_start();
+
+if(isset($_SESSION["login"]) == 'ok'){
   $utente = $_SESSION["utente"];
   $lavoro = $_SESSION["lavoro"];
   // Create connection
