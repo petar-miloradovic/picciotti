@@ -56,7 +56,7 @@ if ($rowcount == 1){
         switch ($tipo){
             case 1: 
                 $_SESSION['lavoro'] = "docente";
-                header("location:docente.html");
+                header("location:docente.php");
                 break;
             case 2:
                 $_SESSION['lavoro'] = "tecnico_software";

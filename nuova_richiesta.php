@@ -24,7 +24,7 @@ else{
 }
 
 date_default_timezone_set('Europe/Rome');
-$data = date("d-m-Y");
+$data = "date("d-m-Y")";
 
 /**
  * tipologia 1/2 (software, hardware)
@@ -65,7 +65,7 @@ switch($priorita){
   break;
 }
 
-$sql = "INSERT INTO $richiesta(data, priorita, descrizione, ambito, luogo, tipologia, status, fk_docente) VALUES ('$data','$prioritaString','$ambito','$luogo','$tipoString',\'accettato\', '$utente')";
+$sql = "INSERT INTO richiesta (data, priorita, descrizione, ambito, luogo, tipologia, status, fk_tecnico,fk_segretario, fk_docente) VALUES ('$data','$prioritaString','$ambito','$luogo','$tipoString','non risolto','tecnigigio','mariobros','$utente')";
 if ($conn->query($sql) === TRUE) {
   echo "Richiesta inviata";
   } else {

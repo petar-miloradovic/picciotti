@@ -18,7 +18,7 @@ if ($result = mysqli_query($conn, $s)){
 
 if ($rowcount == 0){
     //registrazione nuova richiesta
-    $sql = "INSERT INTO richiesta(data,priorità,descrizione,ambito,luogo,tipo,stato,) VALUES ('$data,'$pri','$desc','$amb','$luogo','$tipo',stato')";
+    $sql = "INSERT INTO richiesta(data,priorità,descrizione,ambito,luogo,tipo,stato,) VALUES ('$data,'$pri','$desc','$amb','$luogo','$tipo','$stato')";
     if ($conn->query($sql) === TRUE) {
     echo "Registrazione effettuale";
     } else {

@@ -9,7 +9,7 @@ $password = "";
 $dbname = "picciotti";
 
 session_start();
-echo $_SESSION["login"];
+
 if(isset($_SESSION["login"]) == 'ok'){
   $utente = $_SESSION["utente"];
   $lavoro = $_SESSION["lavoro"];
@@ -41,7 +41,7 @@ $pass2 = $_POST["pass2"];
 
 $pass1 = md5($pass1);
 
-$sql_password = "SELECT password FROM '$lavoro' WHERE username = '$utente'";
+$sql_password = "SELECT password FROM $lavoro WHERE username = '$utente'";
 if ($conn->query($sql_password) === TRUE) {
   echo "password corretta";
   } else {
@@ -57,7 +57,7 @@ if($nome != "" && $cognome != "" && $email != "") {
   }
   //modifica del nome
   if ($nome != "") {
-    $sql_nome = "UPDATE docente SET nome = '$nome' WHERE username = '$utente'";
+    $sql_nome = "UPDATE $lavoro SET nome = '$nome' WHERE username = '$utente'";
     if ($conn->query($sql_nome) === TRUE) {
       echo "nome cambiato";
     } else {
@@ -66,7 +66,7 @@ if($nome != "" && $cognome != "" && $email != "") {
   }
     // modifica del cognome
   if ($cognome != "") { 
-    $sql_cognome = "UPDATE docente SET cognome = '$cognome' WHERE username = '$utente'";
+    $sql_cognome = "UPDATE $lavoro SET cognome = '$cognome' WHERE username = '$utente'";
     if ($conn->query($sql_cognome) === TRUE) {
       echo "cognome cambiato";
     } else {
@@ -75,7 +75,7 @@ if($nome != "" && $cognome != "" && $email != "") {
   }
   //modifica della email
   if ($email != "") {
-    $sql_email = "UPDATE docente SET email = '$email' WHERE username = '$utente'";
+    $sql_email = "UPDATE $lavoro SET email = '$email' WHERE username = '$utente'";
     if ($conn->query($sql_email) === TRUE) {
       echo "email cambiata";
     } else {
@@ -95,7 +95,7 @@ if($nome != "" && $cognome != "" && $email != "") {
       //elimino la password 3(in chiaro) per evitare che possa essere rubata(questioni di sicurezza)
       unset($pass3);
       $pass2 = md5($pass2);
-      $sql_pass2 = "UPDATE docente SET password = '$pass2' WHERE username = '$utente'";
+      $sql_pass2 = "UPDATE $lavoro SET password = '$pass2' WHERE username = '$utente'";
       if ($conn->query($sql_pass2) === TRUE) {
         echo "password cambiata";
       } else {
