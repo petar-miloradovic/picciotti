@@ -1,7 +1,4 @@
 <?php
-/**
- * scritto da petar miloradovic
- */
 session_start();
 
 $servername = "localhost";
