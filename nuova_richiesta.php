@@ -20,10 +20,8 @@ else{
   echo "errore nella connessione al database";
 }
 
-date_default_timezone_set('Europe/Rome');
-$data = date('d-m-Y');
-
 /**
+ * data
  * tipologia 1/2 (software, hardware)
  * ambito
  * descrizione
@@ -31,6 +29,7 @@ $data = date('d-m-Y');
  * luogo
  */
 
+$data = $_POST["data"];
 $tipo = $_POST["tipologia"];  
 $ambito = $_POST["ambito"];
 $descrizione = $_POST["ambito"];
