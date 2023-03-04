@@ -9,7 +9,7 @@ $password = "";
 $dbname = "picciotti";
 
 session_start();
-
+echo $_SESSION["login"];
 if(isset($_SESSION["login"]) == 'ok'){
   $utente = $_SESSION["utente"];
   $lavoro = $_SESSION["lavoro"];
