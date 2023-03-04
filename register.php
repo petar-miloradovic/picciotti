@@ -1,7 +1,7 @@
 <?php
 /**
  * scritto da nicolò beltrame
- */
+ *//
 $lavoro = $_POST["lavoro"];
 $sede = $_POST["sede"];
 $ufficio = $_POST["ufficio"];
