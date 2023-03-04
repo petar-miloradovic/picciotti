@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * scritto da petar miloradovic
+ */
 
 $servername = "localhost";
 $username = "root";
