@@ -11,7 +11,7 @@
             }
             
             // recuperare dati dal database
-            $sql = "SELECT * FROM richiesta where tipologia = 'hardware' order by data";
+            $sql = "SELECT * FROM richiesta where tipologia = 'hardware' and status != 'risolto' order by data";
             $risultato = mysqli_query($conn, $sql);
             
             // stampare la tabella
@@ -30,7 +30,7 @@
                     echo "<td>" . $riga['tipologia'] . "</td>";
                     echo "<td>" . $riga['status'] . "</td>";
                     echo "<td>" ."<form action='update.php' method='post'>
-                         <input type='submit'  name= value='$i'> <br>
+                         <button type='submit' id='num' name='num' value=$i>Risolvi<br>
                     </form>"."</td>";
                     $i+=1;
                     echo "</tr>";
