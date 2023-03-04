@@ -24,7 +24,7 @@ else{
 }
 
 date_default_timezone_set('Europe/Rome');
-$data = "date("d-m-Y")";
+$data = date('d-m-Y');
 
 /**
  * tipologia 1/2 (software, hardware)

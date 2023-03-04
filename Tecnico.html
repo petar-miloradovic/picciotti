@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="style.css">
     <title>Tecnico - Peanuts School</title>
 </head>
 <body>
@@ -16,24 +17,21 @@
         <br>
         <br>
     </form >
-        Modifica dati
-        <form action="update.php" method="post">
-        username:
-        <label for="username">
-            <input type="text" name ="username"/>
-        </label>
-        <br>
-        email:
-        <label for="email">
-            <input type="text" name ="email"/>
-        </label>
-        <br>
-        password:
-        <label for="password">
-            <input type="password" name ="password"/>
-        </label>
-        <br>
-        <input type="submit" placeholder="">
+        <h1>Modifica dei dati</h1>
+    <form action="edit.php" method="post" class="box">
+        <label for="nome">Nome</label>
+        <input type="text" name="nome"> <br>
+        <label for="conome">Cognome</label>
+        <input type="text" name="cognome"> <br>
+        <label for="email">Email</label>
+        <input type="email" name="email"> <br>
+        <label for="pass1" >Password*</label>
+        <input type="password" name="pass1" required> <br>
+        <label for="pass2">Nuova password(lascia vuoto per ignorare)</label>
+        <input type="password" name="pass2"> <br>
+        <label for="pass3">Conferma la nuova password</label>
+        <input type="password" name="pass3"> <br>
+        <input type="submit" value="conferma"> <br>
     </form>
 </body>
 </html>
