@@ -80,5 +80,5 @@ else{
 
 
 mysqli_close($conn);
-session_abort();
+
 ?>
