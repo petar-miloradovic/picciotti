@@ -1,6 +1,6 @@
 # I TRE MOSCHETTIERI ඞ
 
-* Petar Miloradovic (docente.html, edit.php, index.html, nuova_richiesta.php, style.css)
+* Petar Miloradovic (docente.html, edit.php, nuova_richiesta.php, style.css)
 * Nicoló Beltrame (index.html, login.html, login.php, register.html, register.php)
 * Matteo Mario Pulvirenti (tecnico.html, segretario.html, segretario.php, tecnico.php, update.php)
 
